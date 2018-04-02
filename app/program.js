@@ -1,3 +1,5 @@
+var OSinfo = require('../modules/OSinfo');
+
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
 	var input = process.stdin.read();
@@ -13,9 +15,6 @@ process.stdin.on('readable', function() {
 				break;
 			case '/env':
 				process.stdout.write('Process language is as following: ' + process.env.LANG + ' \n');
-				break;
-			case '/getOSinfo':
-				var OSinfo = require('../modules/OSinfo');
 				break;
 			default:
 				process.stderr.write('Wrong instruction!\n');
