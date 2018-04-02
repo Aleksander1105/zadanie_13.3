@@ -16,6 +16,9 @@ process.stdin.on('readable', function() {
 			case '/env':
 				process.stdout.write('Process language is as following: ' + process.env.LANG + ' \n');
 				break;
+			case '/getOSinfo':
+				OSinfo.print();
+				break;
 			default:
 				process.stderr.write('Wrong instruction!\n');
 		} 
